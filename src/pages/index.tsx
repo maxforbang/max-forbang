@@ -3,6 +3,7 @@ import Divider from "~/components/Divider";
 import Logos from "~/components/Logos";
 import { Reviews } from "~/components/Reviews";
 import Layout from "~/components/Layout";
+import Mastela from "~/components/Mastela";
 import type { NextPageWithLayout } from "./_app";
 import type { ReactElement } from "react";
 
@@ -20,6 +21,8 @@ const Home: NextPageWithLayout = () => {
         <div className="max-w-7xl px-8">
           <Reviews />
           <Divider text="PREVIOUS WORK" />
+          <Mastela />
+          {/* <Feature /> */}
           <ContactSection />
         </div>
       </main>
