@@ -1,61 +1,42 @@
 import Head from "next/head";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import ContactSection from "~/components/Contact";
 import Divider from "~/components/Divider";
 import Logos from "~/components/Logos";
+import { Reviews } from "~/components/Reviews";
+import Layout from "~/components/Layout";
+import type { NextPageWithLayout } from "./_app";
+import type { ReactElement } from "react";
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   return (
     <>
-      <Head>
-        <title>Max Forbang</title>
-        <meta
-          name="description"
-          content="Code. Design. Brand. Transform your offer using software. Transform your lead flow using marketing."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {/* Tailwind Scrollbar */}
-      <main className="flex h-full min-h-screen flex-col items-center bg-gradient-to-b from-[#0a0a0a] to-[#15162c]">
-        <Header />
-        <div className="max-w-7xl">
-          <Hero />
-          <Logos />
-          <Divider text="PAST CLIENTS" />
+      {/* TODO: Tailwind Scrollbar */}
+      <main className="flex h-full  flex-col items-center ">
+        <div className="min-h-screen w-full bg-gradient-to-b from-[#0a0a0a] to-[#0b0b16]">
+          <div className="mx-auto max-w-7xl">
+            <Hero />
+            <Logos />
+          </div>
+        </div>
+        <div className="max-w-7xl px-8">
+          <Reviews />
+          <Divider text="PREVIOUS WORK" />
           <ContactSection />
         </div>
       </main>
     </>
   );
-}
+};
 
-function Header() {
-  return (
-    <div className="flex w-full max-w-7xl justify-between p-8">
-      <div className="flex gap-5">
-        <a href="https://twitter.com/maxforbang" target="_blank">
-          <FaTwitter className="h-5 w-5" />
-        </a>
-        <a href="https://linkedin.com/in/max-forbang/" target="_blank">
-          <FaLinkedinIn className="h-5 w-5" />
-        </a>
-        <a href="https://github.com/maxforbang" target="_blank">
-          <FaGithub className="h-5 w-5" />
-        </a>
-      </div>
-      <button
-        type="button"
-        className="whitespace-nowrap rounded-md border border-slate-200 px-2 py-1 text-sm font-semibold text-slate-200 shadow-sm duration-200 hover:bg-slate-400/30"
-      >
-        Contact
-      </button>
-    </div>
-  );
-}
+export default Home;
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
 
 function Hero() {
   return (
-    <div className="mx-auto flex h-full w-full max-w-7xl flex-col items-center  px-4 pt-12 sm:px-6 md:pt-32  lg:px-8">
+    <div className="mx-auto flex h-full w-full flex-col items-center  px-4 pt-12 sm:px-6 md:pt-32  lg:px-8">
       <div className="flex w-min flex-col justify-center lg:flex-row lg:gap-2">
         <span className="animate-textGradient1 bg-gradient-to-r from-[#0694D8] to-[#00DFD8] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
           Code.
@@ -84,7 +65,7 @@ function Hero() {
           <div className="shadow-gradient absolute inset-0 animate-buttonGradient3 rounded-lg bg-gradient-to-br from-[#FF4D4D] to-[#F9CB28]"></div>
           <button
             type="button"
-            className="absolute inset-[1px] z-10 rounded-lg bg-slate-950 font-medium text-slate-200 shadow-sm duration-300 hover:bg-opacity-0 hover:text-slate-950"
+            className="absolute inset-[1px] rounded-lg bg-slate-950 font-medium text-slate-200 shadow-sm duration-300 hover:bg-opacity-0 hover:text-slate-950"
           >
             Contact
           </button>

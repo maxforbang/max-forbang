@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply text-slate-200
+  @apply text-slate-200 bg-[#0b0b16]
 }
 
 .shadow-gradient::before {

@@ -1,7 +1,7 @@
 export default function Logos() {
   return (
     <div className="py-24 sm:py-32 text-slate-400">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto px-6 lg:px-8">
         <h2 className="text-center text-xs font-semibold tracking-widest leading-8 uppercase">
           Trust in the most modern tech stack available
         </h2>
