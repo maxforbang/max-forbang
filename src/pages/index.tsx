@@ -1,4 +1,3 @@
-import Head from "next/head";
 import ContactSection from "~/components/Contact";
 import Divider from "~/components/Divider";
 import Logos from "~/components/Logos";

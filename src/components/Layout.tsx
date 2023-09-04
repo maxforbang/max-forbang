@@ -1,9 +1,5 @@
 import {
-  useState,
-  type JSX,
-  type ReactNode,
-  type SVGProps,
-  useEffect,
+  useState, type ReactNode, useEffect
 } from "react";
 import Head from "next/head";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
