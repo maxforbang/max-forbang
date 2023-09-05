@@ -3,6 +3,7 @@ import Head from "next/head";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import clsx from "clsx";
 import { scrollToContact } from "~/utils/scrollToContact";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -18,7 +19,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <div className="min-h-full">
         <Header scrollToContact={scrollToContact} />
         <main>
-          <div className="mx-auto">{children}</div>
+          <div className="mx-auto">
+            {children}
+            <Analytics />
+          </div>
         </main>
       </div>
     </>
@@ -27,7 +31,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
 export default Layout;
 
-function Header({ scrollToContact }: {scrollToContact: () => void;}) {
+function Header({ scrollToContact }: { scrollToContact: () => void }) {
   const [transparentHeader, setTransparentHeader] = useState(false);
 
   useEffect(() => {
