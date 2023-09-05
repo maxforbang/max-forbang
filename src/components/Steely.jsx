@@ -5,51 +5,60 @@ import {
   FingerPrintIcon,
   LockClosedIcon,
   ServerIcon,
-} from '@heroicons/react/20/solid'
+} from "@heroicons/react/20/solid";
 
 const features = [
   {
-    name: '3D Product Showcase.',
-    description: 'Spotlights product features with a sales page designed specifically to inform and engage.',
+    name: "3D Product Showcase.",
+    description:
+      "Spotlights product features with a sales page designed specifically to inform and engage.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'Job Listings Display.',
-    description: 'Streamlines the hiring process with an integrated careers platform directly on the site.',
+    name: "Job Listings Display.",
+    description:
+      "Streamlines the hiring process with an integrated careers platform directly on the site.",
     icon: LockClosedIcon,
   },
   {
-    name: 'Integrated Newsletter.',
-    description: 'Boosts audience engagement with an actively-updated newsletter display.',
+    name: "Integrated Newsletter.",
+    description:
+      "Boosts audience engagement with an actively-updated newsletter display.",
     icon: ArrowPathIcon,
   },
   {
-    name: 'Blog Platform.',
-    description: 'Features a seamless blog interface, tailored for readers and optimized for publishers.',
+    name: "Blog Platform.",
+    description:
+      "Features a seamless blog interface, tailored for readers and optimized for publishers.",
     icon: FingerPrintIcon,
   },
   {
-    name: 'Optimized Performance.',
-    description: 'Enables lightning-fast load times with a global CDN and serverless functions.',
+    name: "Optimized Performance.",
+    description:
+      "Enables lightning-fast load times with a global CDN and serverless functions.",
     icon: Cog6ToothIcon,
   },
   {
-    name: 'Educational Section.',
+    name: "Educational Section.",
     description: `Interactive "What is VSAT?" page informs visitors who are unfamiliar with the industry.`,
     icon: ServerIcon,
   },
-]
+];
 
 export default function Feature() {
   return (
     <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-base font-semibold leading-7 text-sky-400">VSAT Solutions</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Steely</p>
+          <h2 className="text-base font-semibold leading-7 text-sky-400">
+            VSAT Solutions
+          </h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Steely
+          </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-            dolor cupiditate blanditiis.
+            Strategic marketing on corporate websites attracts better talent and
+            is a business card for potential entreprise clients & partnerships.
           </p>
         </div>
       </div>
@@ -62,7 +71,6 @@ export default function Feature() {
             width={2432}
             height={1442}
           />
-
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
@@ -70,14 +78,17 @@ export default function Feature() {
           {features.map((feature) => (
             <div key={feature.name} className="relative pl-9">
               <dt className="inline font-semibold text-white">
-                <feature.icon className="absolute left-1 top-1 h-5 w-5 text-sky-500" aria-hidden="true" />
+                <feature.icon
+                  className="absolute left-1 top-1 h-5 w-5 text-sky-500"
+                  aria-hidden="true"
+                />
                 {feature.name}
-              </dt>{' '}
+              </dt>{" "}
               <dd className="inline">{feature.description}</dd>
             </div>
           ))}
         </dl>
       </div>
     </div>
-  )
+  );
 }

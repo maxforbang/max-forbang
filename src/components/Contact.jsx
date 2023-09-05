@@ -13,12 +13,38 @@
   ```
 */
 import {
-  BuildingOffice2Icon,
+  CheckCircleIcon,
   EnvelopeIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { api } from "~/utils/api";
+import MoonLoader from "react-spinners/MoonLoader";
+import clsx from "clsx";
 
 export default function ContactSection() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const {
+    mutate: sendEmail,
+    data,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+  } = api.email.send.useMutation({ onSettled: () => setFormSubmitted(true) });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    sendEmail();
+    // const form = event.currentTarget;
+    // const emailInputElement = form.querySelector("#email-address");
+
+    // if (emailInputElement) {
+    //   const email = emailInputElement.value;
+    //   emailInputElement.value = "";
+    // }
+  };
+
   return (
     <div
       id="contactSection"
@@ -75,8 +101,8 @@ export default function ContactSection() {
               Get in touch
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              Feel free to reach out to me to determine whether my skillsets
-              align with your unique business problem.
+              You can contact me using my contact info below, or by scheduling a
+              call.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-slate-300">
               <div className="flex gap-x-4">
@@ -90,7 +116,7 @@ export default function ContactSection() {
                 <dd>
                   <a
                     className="hover:text-slate-200"
-                    href="tel:+1 (555) 234-5678"
+                    href="tel:+1 (703) 679-7985"
                   >
                     +1 (703) 679-7985
                   </a>
@@ -107,7 +133,7 @@ export default function ContactSection() {
                 <dd>
                   <a
                     className="hover:text-slate-200"
-                    href="mailto:hello@example.com"
+                    href="mailto:max@strukter.io"
                   >
                     max@strukter.io
                   </a>
@@ -116,109 +142,136 @@ export default function ContactSection() {
             </dl>
           </div>
         </div>
-        <form
-          action="#"
-          method="POST"
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-        >
-          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div>
-                <label
-                  htmlFor="first-name"
-                  className="block text-sm font-semibold leading-6 text-slate-200"
-                >
-                  First name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+        {formSubmitted ? (
+          <div className="flex h-full w-full flex-col items-center justify-center px-12 text-center text-2xl ">
+            {isSuccess ? (
+              <div className="flex items-center gap-5 text-center">
+                <p>Your email has been delivered.</p>
+                <CheckCircleIcon className="h-8 w-8 text-emerald-600" />
               </div>
-              <div>
-                <label
-                  htmlFor="last-name"
-                  className="block text-sm font-semibold leading-6 text-slate-200"
-                >
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+            ) : (
+              <div className="flex flex-col gap-8">
+                <p>
+                  There has been an error submitting your message. Please try
+                  again or reach out directly through email or phone.
+                </p>
+                {error && (
+                  <p className="text-md animate-pulse px-12 text-center text-rose-600">
+                    {`Error: ${error.msg}`}
+                  </p>
+                )}
               </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold leading-6 text-slate-200"
-                >
-                  Email
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="phone-number"
-                  className="block text-sm font-semibold leading-6 text-slate-200"
-                >
-                  Phone number
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="tel"
-                    name="phone-number"
-                    id="phone-number"
-                    autoComplete="tel"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold leading-6 text-slate-200"
-                >
-                  Message
-                </label>
-                <div className="mt-2.5">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                    defaultValue={""}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 flex justify-end">
-              <button
-                type="submit"
-                className="rounded-md bg-gradient-to-br from-[#0694D8] to-[#00DFD8] px-3.5 py-2.5 text-center text-sm font-semibold text-black shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                Send message
-              </button>
-            </div>
+            )}
           </div>
-        </form>
+        ) : (
+          <form
+            action=""
+            method="POST"
+            className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+          >
+            <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="first-name"
+                    className="block text-sm font-semibold leading-6 text-slate-200"
+                  >
+                    First name
+                  </label>
+                  <div className="mt-2.5">
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      autoComplete="given-name"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="last-name"
+                    className="block text-sm font-semibold leading-6 text-slate-200"
+                  >
+                    Last name
+                  </label>
+                  <div className="mt-2.5">
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      autoComplete="family-name"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold leading-6 text-slate-200"
+                  >
+                    Email
+                  </label>
+                  <div className="mt-2.5">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      autoComplete="email"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="phone-number"
+                    className="block text-sm font-semibold leading-6 text-slate-200"
+                  >
+                    Phone number
+                  </label>
+                  <div className="mt-2.5">
+                    <input
+                      type="tel"
+                      name="phone-number"
+                      id="phone-number"
+                      autoComplete="tel"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold leading-6 text-slate-200"
+                  >
+                    Message
+                  </label>
+                  <div className="mt-2.5">
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows={4}
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      defaultValue={""}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 flex items-center justify-end">
+                <button
+                  type="submit"
+                  onClick={handleSubmit}
+                  className={clsx(
+                    "h-10 w-32 rounded-md bg-gradient-to-br from-[#0694D8] to-[#00DFD8] text-center text-sm font-semibold shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500",
+                    isLoading ? "text-white" : "text-black",
+                  )}
+                >
+                  {isLoading ? "Sending..." : "Send message"}
+                </button>
+              </div>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );
