@@ -4,13 +4,13 @@ export default function Hero() {
   return (
     <div className="mx-auto flex h-full w-full flex-col items-center  px-4 pt-12 sm:px-6 md:pt-32  lg:px-8">
       <div className="flex w-min flex-col justify-center lg:flex-row lg:gap-2">
-        <span className=" bg-gradient-to-r from-[#0694D8] to-[#00DFD8] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
+        <span className="animate-textGradient1 bg-gradient-to-r from-[#0694D8] to-[#00DFD8] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
           Code.
         </span>
-        <span className="bg-gradient-to-r from-[#7928CA] to-[#FF0080] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
+        <span className="animate-textGradient2 bg-gradient-to-r from-[#7928CA] to-[#FF0080] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
           Design.
         </span>
-        <span className=" bg-gradient-to-r from-[#FF4D4D] to-[#F9CB28] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
+        <span className="animate-textGradient3 bg-gradient-to-r from-[#FF4D4D] to-[#F9CB28] bg-clip-text py-2 text-6xl font-bold text-transparent lg:text-8xl">
           Brand.
         </span>
       </div>
