@@ -1,9 +1,8 @@
-import {
-  useState, type ReactNode, useEffect
-} from "react";
+import { useState, type ReactNode, useEffect } from "react";
 import Head from "next/head";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import clsx from "clsx";
+import { scrollToContact } from "~/utils/scrollToContact";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -17,7 +16,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-full">
-        <Header />
+        <Header scrollToContact={scrollToContact} />
         <main>
           <div className="mx-auto">{children}</div>
         </main>
@@ -28,7 +27,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
 export default Layout;
 
-function Header() {
+function Header({ scrollToContact }: {scrollToContact: () => void;}) {
   const [transparentHeader, setTransparentHeader] = useState(false);
 
   useEffect(() => {
@@ -74,6 +73,7 @@ function Header() {
         <button
           type="button"
           className="whitespace-nowrap rounded-md border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-200 shadow-sm duration-200 hover:bg-slate-400/30"
+          onClick={scrollToContact}
         >
           Contact
         </button>

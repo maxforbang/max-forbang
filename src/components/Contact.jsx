@@ -20,7 +20,10 @@ import {
 
 export default function ContactSection() {
   return (
-    <div className="relative isolate rounded-2xl border border-slate-400 mt-24">
+    <div
+      id="contactSection"
+      className="relative isolate mt-24 rounded-2xl border border-slate-400"
+    >
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -72,25 +75,10 @@ export default function ContactSection() {
               Get in touch
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              Feel free to reach out to me to determine whether my skillsets
+              align with your unique business problem.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-slate-300">
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Address</span>
-                  <BuildingOffice2Icon
-                    className="h-7 w-6 text-slate-400"
-                    aria-hidden="true"
-                  />
-                </dt>
-                <dd>
-                  545 Mavis Island
-                  <br />
-                  Chicago, IL 99191
-                </dd>
-              </div>
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
@@ -100,8 +88,11 @@ export default function ContactSection() {
                   />
                 </dt>
                 <dd>
-                  <a className="hover:text-slate-200" href="tel:+1 (555) 234-5678">
-                    +1 (555) 234-5678
+                  <a
+                    className="hover:text-slate-200"
+                    href="tel:+1 (555) 234-5678"
+                  >
+                    +1 (703) 679-7985
                   </a>
                 </dd>
               </div>
@@ -118,7 +109,7 @@ export default function ContactSection() {
                     className="hover:text-slate-200"
                     href="mailto:hello@example.com"
                   >
-                    hello@example.com
+                    max@strukter.io
                   </a>
                 </dd>
               </div>

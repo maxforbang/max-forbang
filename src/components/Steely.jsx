@@ -9,33 +9,33 @@ import {
 
 const features = [
   {
-    name: 'Push to deploy.',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
+    name: '3D Product Showcase.',
+    description: 'Spotlights product features with a sales page designed specifically to inform and engage.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    name: 'Job Listings Display.',
+    description: 'Streamlines the hiring process with an integrated careers platform directly on the site.',
     icon: LockClosedIcon,
   },
   {
-    name: 'Simple queues.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
+    name: 'Integrated Newsletter.',
+    description: 'Boosts audience engagement with an actively-updated newsletter display.',
     icon: ArrowPathIcon,
   },
   {
-    name: 'Advanced security.',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
+    name: 'Blog Platform.',
+    description: 'Features a seamless blog interface, tailored for readers and optimized for publishers.',
     icon: FingerPrintIcon,
   },
   {
-    name: 'Powerful API.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    name: 'Optimized Performance.',
+    description: 'Enables lightning-fast load times with a global CDN and serverless functions.',
     icon: Cog6ToothIcon,
   },
   {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ',
+    name: 'Educational Section.',
+    description: `Interactive "What is VSAT?" page informs visitors who are unfamiliar with the industry.`,
     icon: ServerIcon,
   },
 ]
@@ -45,8 +45,8 @@ export default function Feature() {
     <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">Everything you need</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">No server? No problem.</p>
+          <h2 className="text-base font-semibold leading-7 text-sky-400">VSAT Solutions</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Steely</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
             dolor cupiditate blanditiis.
@@ -56,15 +56,13 @@ export default function Feature() {
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <img
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            src="/steely-mockups.png"
             alt="App screenshot"
-            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
+            className="rounded-xl shadow-2xl"
             width={2432}
             height={1442}
           />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-900 pt-[7%]" />
-          </div>
+
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
@@ -72,7 +70,7 @@ export default function Feature() {
           {features.map((feature) => (
             <div key={feature.name} className="relative pl-9">
               <dt className="inline font-semibold text-white">
-                <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-500" aria-hidden="true" />
+                <feature.icon className="absolute left-1 top-1 h-5 w-5 text-sky-500" aria-hidden="true" />
                 {feature.name}
               </dt>{' '}
               <dd className="inline">{feature.description}</dd>
