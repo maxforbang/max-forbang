@@ -56,10 +56,11 @@ export default function Feature() {
           <h2 className="text-base font-semibold leading-7 text-sky-400">
             Vacation Rentals
           </h2>
-          <div className="relative mt-2 text-3xl font-bold mx-auto w-min whitespace-nowrap tracking-tight text-white sm:text-4xl">
+
+          <div className="relative mt-2 w-min whitespace-nowrap text-3xl font-bold tracking-tight text-white sm:mx-auto sm:text-4xl">
             Mastela Vacations
             <a href="https://mastelavacations.com" target="_blank">
-              <ArrowTopRightOnSquareIcon className="h-8 w-8 absolute top-1 -right-16" />
+              <ArrowTopRightOnSquareIcon className="absolute -right-16 top-1 h-8 w-8" />
             </a>
           </div>
           <p className="mt-6 text-lg leading-8 text-gray-300">
