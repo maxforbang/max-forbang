@@ -6,6 +6,7 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const features = [
   {
@@ -53,9 +54,12 @@ export default function Feature() {
           <h2 className="text-base font-semibold leading-7 text-sky-400">
             VSAT Solutions
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <div className="relative mt-2 text-3xl font-bold mx-auto w-min whitespace-nowrap tracking-tight text-white sm:text-4xl">
             Steely
-          </p>
+            <a href="https://steely.cc" target="_blank">
+              <ArrowTopRightOnSquareIcon className="h-8 w-8 absolute top-1 -right-16" />
+            </a>
+          </div>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Strategic marketing on corporate websites attracts better talent and
             is a business card for potential entreprise clients & partnerships.

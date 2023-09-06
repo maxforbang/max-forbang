@@ -1,19 +1,26 @@
+import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 export const emailRouter = createTRPCRouter({
   send: publicProcedure
-    // .input(z.object({ text: z.string() }))
-    // .mutation(async ({ input, ctx }) => {
-    .mutation(async ({ ctx }) => {
+    .input(
+      z.object({
+        fname: z.string(),
+        lname: z.string(),
+        email: z.string(),
+        phone: z.string(),
+        message: z.string(),
+      }),
+    )
+    .mutation(async ({ input, ctx }) => {
+      const { fname, lname, email, phone, message } = input;
       try {
         // const response = await ctx.resend.emails.send({
         await ctx.resend.emails.send({
-          // from: "max@strukter.io",
-          // to: "max@strukter.io",
-          from: "onboarding@resend.dev",
-          to: "maxforbangdev@gmail.com",
+          from: "max@strukter.io",
+          to: "max@strukter.io",
           subject: "Personal Website Inquiry",
-          html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+          html: `<p>${message}\n${fname} ${lname}\n${email}\n${phone}</p>`,
         });
 
         return { success: true };

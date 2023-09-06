@@ -24,6 +24,8 @@ import clsx from "clsx";
 
 export default function ContactSection() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
   const {
     mutate: sendEmail,
     data,
@@ -35,20 +37,44 @@ export default function ContactSection() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    sendEmail();
-    // const form = event.currentTarget;
-    // const emailInputElement = form.querySelector("#email-address");
+    const form = event.currentTarget;
 
-    // if (emailInputElement) {
-    //   const email = emailInputElement.value;
-    //   emailInputElement.value = "";
-    // }
+    const fnameInputElement = form.querySelector("#first-name");
+    const lnameInputElement = form.querySelector("#last-name");
+    const emailInputElement = form.querySelector("#email");
+    const phoneInputElement = form.querySelector("#phone-number");
+    const messageInputElement = form.querySelector("#message");
+
+    console.log(fnameInputElement);
+    console.log(lnameInputElement);
+    console.log(emailInputElement);
+    console.log(phoneInputElement);
+    console.log(messageInputElement);
+
+    if (
+      !fnameInputElement ||
+      !lnameInputElement ||
+      !emailInputElement ||
+      !phoneInputElement ||
+      !messageInputElement
+    ) {
+      setErrorMsg("Please fill in all fields.");
+      return;
+    }
+
+    sendEmail({
+      fname: fnameInputElement.value,
+      lname: lnameInputElement.value,
+      email: emailInputElement.value,
+      phone: phoneInputElement.value,
+      message: messageInputElement.value,
+    });
   };
 
   return (
     <div
       id="contactSection"
-      className="relative isolate mt-24 rounded-2xl border border-slate-400"
+      className="relative isolate mb-12 mt-24 rounded-2xl border border-slate-400"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
@@ -101,7 +127,7 @@ export default function ContactSection() {
               Get in touch
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              You can contact me using my contact info below, or by scheduling a
+              You can contact me using my contact info below or by scheduling a
               call.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-slate-300">
@@ -145,7 +171,7 @@ export default function ContactSection() {
         {formSubmitted ? (
           <div className="flex h-full w-full flex-col items-center justify-center px-12 text-center text-2xl ">
             {isSuccess ? (
-              <div className="flex items-center gap-5 text-center">
+              <div className="flex items-center gap-5 py-10 text-center">
                 <p>Your email has been delivered.</p>
                 <CheckCircleIcon className="h-8 w-8 text-emerald-600" />
               </div>
@@ -165,8 +191,7 @@ export default function ContactSection() {
           </div>
         ) : (
           <form
-            action=""
-            method="POST"
+            onSubmit={handleSubmit}
             className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
           >
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
@@ -217,6 +242,7 @@ export default function ContactSection() {
                       type="email"
                       name="email"
                       id="email"
+                      required
                       autoComplete="email"
                       className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                     />
@@ -253,6 +279,7 @@ export default function ContactSection() {
                       rows={4}
                       className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       defaultValue={""}
+                      required
                     />
                   </div>
                 </div>
@@ -260,7 +287,6 @@ export default function ContactSection() {
               <div className="mt-8 flex items-center justify-end">
                 <button
                   type="submit"
-                  onClick={handleSubmit}
                   className={clsx(
                     "h-10 w-32 rounded-md bg-gradient-to-br from-[#0694D8] to-[#00DFD8] text-center text-sm font-semibold shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500",
                     isLoading ? "text-white" : "text-black",
@@ -269,6 +295,11 @@ export default function ContactSection() {
                   {isLoading ? "Sending..." : "Send message"}
                 </button>
               </div>
+              {errorMsg !== "" && (
+                <p className="text-md mt-10 animate-pulse px-12 text-center text-rose-500">
+                  {errorMsg}
+                </p>
+              )}
             </div>
           </form>
         )}
