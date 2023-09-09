@@ -50,7 +50,7 @@ const features = [
 export default function Feature() {
   return (
     // <div className=" py-24 sm:py-32">
-    <div className="py-24 sm:pt-0">
+    <div id='mastela-section' className="py-24 sm:pt-0">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-base font-semibold leading-7 text-sky-400">

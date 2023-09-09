@@ -2,7 +2,7 @@ import { useState, type ReactNode, useEffect } from "react";
 import Head from "next/head";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import clsx from "clsx";
-import { scrollToContact } from "~/utils/scrollToContact";
+import { scrollToContact } from "~/utils/scrollHandlers";
 import { Analytics } from "@vercel/analytics/react";
 
 const Layout = ({ children }: { children: ReactNode }) => {

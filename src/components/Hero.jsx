@@ -1,4 +1,4 @@
-import { scrollToContact } from "~/utils/scrollToContact";
+import { scrollToContact, scrollToFeatures } from "~/utils/scrollHandlers";
 
 export default function Hero() {
   return (
@@ -21,6 +21,7 @@ export default function Hero() {
       <div className="mt-16 flex w-full flex-col justify-center gap-6 px-8 lg:flex-row lg:gap-8">
         <button
           type="button"
+          onClick={scrollToFeatures}
           className="h-12 w-full rounded-md bg-slate-200 px-3 py-3 font-medium text-slate-800 shadow-sm duration-200 hover:opacity-70 lg:w-48"
         >
           Learn More
@@ -34,7 +35,7 @@ export default function Hero() {
           <div className="shadow-gradient absolute inset-0 animate-buttonGradient3 rounded-lg bg-gradient-to-br from-[#FF4D4D] to-[#F9CB28]"></div>
           <button
             type="button"
-            className="absolute inset-[1px] rounded-lg bg-slate-950 font-medium text-slate-200 shadow-sm duration-300 hover:bg-opacity-0 hover:text-slate-950"
+            className="absolute inset-[1px] rounded-lg bg-slate-950 font-medium text-slate-200 shadow-sm duration-150 hover:bg-opacity-0 hover:text-slate-950"
           >
             Contact
           </button>
