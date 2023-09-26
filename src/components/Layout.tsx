@@ -64,14 +64,14 @@ function Header({ scrollToContact }: { scrollToContact: () => void }) {
         )}
       >
         <div className="flex items-center gap-5">
-          <a href="https://twitter.com/maxforbang" target="_blank">
-            <FaTwitter className="h-5 w-5" />
-          </a>
           <a href="https://linkedin.com/in/max-forbang/" target="_blank">
             <FaLinkedinIn className="h-5 w-5" />
           </a>
           <a href="https://github.com/maxforbang" target="_blank">
             <FaGithub className="h-5 w-5" />
+          </a>
+          <a href="https://twitter.com/maxforbang" target="_blank">
+            <FaTwitter className="h-5 w-5" />
           </a>
         </div>
         <button
