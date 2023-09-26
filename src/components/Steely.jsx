@@ -56,7 +56,7 @@ export default function Feature() {
           </h2>
           <div className="relative mt-2 text-3xl sm:mx-auto w-min font-bold whitespace-nowrap tracking-tight text-white sm:text-4xl">
             Steely
-            <a href="https://steely-site.vercel.app" target="_blank">
+            <a href="https://steely.cc" target="_blank">
               <ArrowTopRightOnSquareIcon className="h-8 w-8 absolute top-1 -right-16" />
             </a>
           </div>
