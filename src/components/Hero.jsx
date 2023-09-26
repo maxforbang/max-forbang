@@ -33,12 +33,12 @@ export default function Hero() {
           <div className="shadow-gradient absolute inset-0 animate-buttonGradient1 rounded-lg bg-gradient-to-br from-[#0694D8] to-[#00DFD8]"></div>
           <div className="shadow-gradient absolute inset-0 animate-buttonGradient2 rounded-lg bg-gradient-to-br from-[#7928CA] to-[#FF0080]"></div>
           <div className="shadow-gradient absolute inset-0 animate-buttonGradient3 rounded-lg bg-gradient-to-br from-[#FF4D4D] to-[#F9CB28]"></div>
-          <button
+          <div
             type="button"
-            className="absolute inset-[1px] rounded-lg bg-slate-950 font-medium text-slate-200 shadow-sm duration-150 hover:bg-opacity-0 hover:text-slate-950"
+            className="cursor-pointer flex items-center justify-center absolute inset-[1px] rounded-lg bg-slate-950 font-medium text-slate-200 shadow-sm duration-150 hover:bg-opacity-0 hover:text-slate-950"
           >
             Contact
-          </button>
+          </div>
         </div>
       </div>
     </div>
