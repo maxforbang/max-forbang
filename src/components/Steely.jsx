@@ -7,6 +7,7 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const features = [
   {
@@ -68,8 +69,8 @@ export default function Feature() {
       </div>
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <img
-            src="/steely-mockups.png"
+          <Image
+            src="/steely_mockup.png"
             alt="App screenshot"
             className="rounded-xl shadow-2xl"
             width={2432}

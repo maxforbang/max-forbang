@@ -6,74 +6,74 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { ArrowTopRightOnSquareIcon, ChatBubbleLeftRightIcon, ClipboardDocumentListIcon, ComputerDesktopIcon, DevicePhoneMobileIcon, SparklesIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const features = [
   {
-    name: "Instant Booking & Payment.",
+    name: "Contextual AI Chatbots.",
     description:
-      "Provides seamless date searches and immediate payment options connected to Stripe.",
-    icon: CloudArrowUpIcon,
+      "Team members can use natural language to inquire about all company-specific information.",
+    icon: ChatBubbleLeftRightIcon,
   },
   {
-    name: "Intuitive Blog Integration.",
+    name: "Centralized Dashboard.",
     description:
-      "Supplies SEO-optimized content through an easy-to-use, built-in blog platform.",
-    icon: LockClosedIcon,
+      "Display and maintain all your vacation rental software in one place through their native API's.",
+    icon: ComputerDesktopIcon,
   },
   {
-    name: "Automated Keycodes.",
+    name: "AI Content Creation.",
     description:
-      "Automatically generates digital keypad codes for guests upon booking.",
-    icon: FingerPrintIcon,
+      "Automatically generate personalized marketing content optimized to increase revenue and exposure.",
+    icon: ClipboardDocumentListIcon,
   },
   {
-    name: "Dynamic Admin Controls.",
+    name: "Smart Home Guest App.",
     description:
-      "Allows managers to manage guests and bookings with a custom owner dashboard.",
-    icon: ArrowPathIcon,
+      "Smart home control app which features an AI Concierge tailored to the property and location.",
+    icon: DevicePhoneMobileIcon,
   },
   {
-    name: "Interactive Maps.",
+    name: "Unified Communication.",
     description:
-      "Enables guests to explore surroundings and plan trips with precision for each property.",
-    icon: Cog6ToothIcon,
+      "Pick up guest and contractor communication at any time between multiple team members.",
+    icon: UserGroupIcon,
   },
   {
-    name: "Secure & Streamlined.",
+    name: "Personalized Branding.",
     description:
-      "Encrypts all transactions, communication, and data storage, keeping information protected.",
-    icon: ServerIcon,
+      "White label all Strukter software to your own personal brand to better connect with your clients.",
+    icon: SparklesIcon,
   },
 ];
 
 export default function Feature() {
   return (
     // <div className=" py-24 sm:py-32">
-    <div id='mastela-section' className="py-24 sm:py-32">
+    <div id="mastela-section" className="py-24 sm:pt-0">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-base font-semibold leading-7 text-sky-400">
-            Vacation Rentals
+            Vacation Rental Technology Solutions
           </h2>
 
           <div className="relative mt-2 w-min whitespace-nowrap text-3xl font-bold tracking-tight text-white sm:mx-auto sm:text-4xl">
-            Mastela Vacations
-            <a href="https://mastelavacations.com" target="_blank">
+            Strukter
+            <a href="https://strukter.io" target="_blank">
               <ArrowTopRightOnSquareIcon className="absolute -right-16 top-1 h-8 w-8" />
             </a>
           </div>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Using SEO to redirect potential guests to vacation homes cuts out
-            the middle man and lessens reliance on sites like AirBnB.
+            Custom-built software for vacation rental management companies to
+            scale and automate their businesses using AI.
           </p>
         </div>
       </div>
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image
-            src="/mastela_mockup.png"
+            src="/strukter_mockup.png"
             alt="App screenshot"
             className=" rounded-xl shadow-2xl"
             width={2432}

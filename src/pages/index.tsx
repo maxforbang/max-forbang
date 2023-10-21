@@ -4,6 +4,7 @@ import ContactSection from "~/components/Contact";
 import Logos from "~/components/Logos";
 import Hero from "~/components/Hero";
 import Layout from "~/components/Layout";
+import Strukter from "~/components/Strukter";
 import Mastela from "~/components/Mastela";
 import Steely from "~/components/Steely";
 import type { NextPageWithLayout } from "./_app";
@@ -14,7 +15,7 @@ const Home: NextPageWithLayout = () => {
     <>
       {/* TODO: Tailwind Scrollbar */}
       <main className="flex h-full  flex-col items-center ">
-        <div className="min-h-screen w-full bg-gradient-to-b from-[#0a0a0a] to-[#0b0b16]">
+        <div className="min-h-screen lg:min-h-0 lg:mb-48 w-full bg-gradient-to-b from-[#0a0a0a] to-[#0b0b16]">
           <div className="mx-auto max-w-7xl">
             <Hero />
             <Logos />
@@ -23,6 +24,7 @@ const Home: NextPageWithLayout = () => {
         <div className="max-w-7xl px-8">
           {/* <Reviews />
           <Divider text="PREVIOUS WORK" /> */}
+          <Strukter />
           <Mastela />
           <Steely />
           <ContactSection />
@@ -37,5 +39,3 @@ export default Home;
 Home.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
-
-
