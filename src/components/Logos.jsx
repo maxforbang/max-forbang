@@ -9,35 +9,35 @@ export default function Logos() {
           <img
             className="col-span-2 mt-5 max-h-12 w-full object-contain lg:col-span-1"
             src="/aws-2.svg"
-            alt="Transistor"
+            alt="AWS Amazon Web Services"
             width={158}
             height={48}
           />
           <img
             className="col-span-2 max-h-12 w-full scale-125 object-contain lg:col-span-1"
             src="/nextjs-2.svg"
-            alt="Reform"
+            alt="Nextjs"
             width={158}
             height={48}
           />
           <img
             className="col-span-2 mx-auto max-h-6 object-contain lg:col-span-1"
             src="/sanity.svg"
-            alt="Tuple"
+            alt="Sanity CMS"
             width={158}
             height={48}
           />
           <img
             className="col-span-2 mx-auto max-h-8 w-full object-contain sm:col-start-2 lg:col-span-1"
             src="/figma-5.svg"
-            alt="SavvyCal"
+            alt="Figma"
             width={158}
             height={48}
           />
           <img
             className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
             src="tailwind-css-wordmark.svg"
-            alt="Statamic"
+            alt="TailwindCSS"
             width={158}
             height={48}
           />
