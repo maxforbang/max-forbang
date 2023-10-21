@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           name="description"
           content="Code. Design. Brand. Transform your offer using software. Transform your lead flow using marketing."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="min-h-full">
         <Header scrollToContact={scrollToContact} />
