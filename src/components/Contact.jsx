@@ -19,9 +19,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { api } from "~/utils/api";
-import MoonLoader from "react-spinners/MoonLoader";
 import clsx from "clsx";
-import { FadeLoader } from "react-spinners";
 
 export default function ContactSection() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -45,12 +43,6 @@ export default function ContactSection() {
     const emailInputElement = form.querySelector("#email");
     const phoneInputElement = form.querySelector("#phone-number");
     const messageInputElement = form.querySelector("#message");
-
-    console.log(fnameInputElement);
-    console.log(lnameInputElement);
-    console.log(emailInputElement);
-    console.log(phoneInputElement);
-    console.log(messageInputElement);
 
     if (
       !fnameInputElement ||
@@ -210,7 +202,7 @@ export default function ContactSection() {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -227,7 +219,7 @@ export default function ContactSection() {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -245,7 +237,7 @@ export default function ContactSection() {
                       id="email"
                       required
                       autoComplete="email"
-                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -262,7 +254,7 @@ export default function ContactSection() {
                       name="phone-number"
                       id="phone-number"
                       autoComplete="tel"
-                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -278,7 +270,7 @@ export default function ContactSection() {
                       name="message"
                       id="message"
                       rows={4}
-                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-slate-200 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
                       defaultValue={""}
                       required
                     />
@@ -289,7 +281,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   className={clsx(
-                    "h-10 w-32 rounded-md  text-center text-sm hover:opacity-75 duration-150 font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500",
+                    "h-10 w-32 rounded-md  text-center text-sm hover:opacity-75 duration-150 font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500",
                     isLoading
                       ? "bg-slate-300 text-slate-800"
                       : "bg-gradient-to-br from-[#0694D8] to-[#00DFD8] text-slate-800",
