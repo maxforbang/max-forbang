@@ -60,7 +60,7 @@ export default function Feature() {
 
           <div className="relative mt-2 w-min whitespace-nowrap text-3xl font-bold tracking-tight text-white sm:mx-auto sm:text-4xl">
             Mastela Vacations
-            <a href="https://mastelavacations.com" target="_blank">
+            <a href="https://www.mastelavacations.com" target="_blank">
               <ArrowTopRightOnSquareIcon className="absolute -right-16 top-1 h-8 w-8" />
             </a>
           </div>

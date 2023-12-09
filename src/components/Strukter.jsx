@@ -59,8 +59,8 @@ export default function Feature() {
           </h2>
 
           <div className="relative mt-2 w-min whitespace-nowrap text-3xl font-bold tracking-tight text-white sm:mx-auto sm:text-4xl">
-            Strukter
-            <a href="https://strukter.io" target="_blank">
+            Strukter Homes
+            <a href="https://www.strukterhomes.com" target="_blank">
               <ArrowTopRightOnSquareIcon className="absolute -right-16 top-1 h-8 w-8" />
             </a>
           </div>
