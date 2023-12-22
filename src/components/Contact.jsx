@@ -13,6 +13,7 @@
   ```
 */
 import {
+  ArrowTopRightOnSquareIcon,
   CheckCircleIcon,
   EnvelopeIcon,
   PhoneIcon,
@@ -20,6 +21,7 @@ import {
 import { useState } from "react";
 import { api } from "~/utils/api";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function ContactSection() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -159,6 +161,13 @@ export default function ContactSection() {
                 </dd>
               </div>
             </dl>
+            <Link
+              href="https://calendly.com/strukter/discovery-call"
+              target="_blank"
+              className="flex animate-pulse items-center gap-3 pt-12 text-xl text-sky-500"
+            >
+              Schedule a call <ArrowTopRightOnSquareIcon className="h-6 w-6" />
+            </Link>
           </div>
         </div>
         {formSubmitted ? (
@@ -281,7 +290,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   className={clsx(
-                    "h-10 w-32 rounded-md  text-center text-sm hover:opacity-75 duration-150 font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500",
+                    "h-10 w-32 rounded-md  text-center text-sm font-semibold shadow-sm duration-150 hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500",
                     isLoading
                       ? "bg-slate-300 text-slate-800"
                       : "bg-gradient-to-br from-[#0694D8] to-[#00DFD8] text-slate-800",

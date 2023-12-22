@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { scrollToContact, scrollToFeatures } from "~/utils/scrollHandlers";
 
 export default function Hero() {
@@ -19,13 +20,13 @@ export default function Hero() {
         automations and market-dominating branding.
       </p>
       <div className="mt-16 flex w-full flex-col justify-center gap-6 px-8 lg:flex-row lg:gap-8">
-        <button
-          type="button"
-          onClick={scrollToFeatures}
-          className="h-12 w-full rounded-md bg-slate-200 px-3 py-3 font-medium text-slate-800 shadow-sm duration-200 hover:opacity-70 lg:w-48"
+        <Link
+          href='https://www.strukter.io'
+          target="_blank"
+          className="h-12 text-center w-full rounded-md bg-slate-200 px-3 py-3 font-medium text-slate-800 shadow-sm duration-200 hover:opacity-70 lg:w-48"
         >
-          Learn More
-        </button>
+          Lead Generation
+        </Link>
         <div
           className="relative h-12 w-full rounded-lg lg:w-48"
           onClick={scrollToContact}
