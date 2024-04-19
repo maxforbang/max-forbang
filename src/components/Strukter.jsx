@@ -20,19 +20,19 @@ const features = [
     name: "Nurturing Campaigns.",
     description:
       "Automatically follow-up on prospects with personalized AI voice and text agents.",
-    icon: ComputerDesktopIcon,
+    icon: SparklesIcon,
   },
   {
     name: "Customer Support Chatbots.",
     description:
       "Embed support agents into SMS, email, WhatsApp, social media, and your website.",
-    icon: ClipboardDocumentListIcon,
+    icon: DevicePhoneMobileIcon,
   },
   {
     name: "Automated Proposal Generation.",
     description:
       "Platform-agnostic proposal generation so you can close directly on the call.",
-    icon: DevicePhoneMobileIcon,
+    icon: ClipboardDocumentListIcon,
   },
   {
     name: "Employee Training and Assistance.",
@@ -44,7 +44,7 @@ const features = [
     name: "AI Onboarding.",
     description:
       "Seamlessly onboard new clients and give them 24/7 access to onboarding materials.",
-    icon: SparklesIcon,
+    icon: ComputerDesktopIcon,
   },
 ];
 
