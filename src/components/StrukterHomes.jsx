@@ -1,49 +1,49 @@
 import {
-  ArrowTopRightOnSquareIcon,
-  ChatBubbleLeftRightIcon,
-  ClipboardDocumentListIcon,
-  ComputerDesktopIcon,
-  DevicePhoneMobileIcon,
-  SparklesIcon,
-  UserGroupIcon,
-} from "@heroicons/react/24/outline";
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  Cog6ToothIcon,
+  FingerPrintIcon,
+  LockClosedIcon,
+  ServerIcon,
+} from "@heroicons/react/20/solid";
+import { ArrowTopRightOnSquareIcon, ChatBubbleLeftRightIcon, ClipboardDocumentListIcon, ComputerDesktopIcon, DevicePhoneMobileIcon, SparklesIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const features = [
   {
-    name: "Lead Generation.",
+    name: "Contextual AI Chatbots.",
     description:
-      "Targeted lead list generation with automatic qualification and prospect scoring.",
+      "Team members can use natural language to inquire about all company-specific information.",
     icon: ChatBubbleLeftRightIcon,
   },
   {
-    name: "Nurturing Campaigns.",
+    name: "Centralized Dashboard.",
     description:
-      "Automatically follow-up on prospects with personalized AI voice and text agents.",
+      "Display and maintain all your vacation rental software in one place through their native API's.",
     icon: ComputerDesktopIcon,
   },
   {
-    name: "Customer Support Chatbots.",
+    name: "AI Content Creation.",
     description:
-      "Embed support agents into SMS, email, WhatsApp, social media, and your website.",
+      "Automatically generate personalized marketing content optimized to increase revenue and exposure.",
     icon: ClipboardDocumentListIcon,
   },
   {
-    name: "Automated Proposal Generation.",
+    name: "Smart Home Guest App.",
     description:
-      "Platform-agnostic proposal generation so you can close directly on the call.",
+      "Smart home control app which features an AI Concierge tailored to the property and location.",
     icon: DevicePhoneMobileIcon,
   },
   {
-    name: "Employee Training and Assistance.",
+    name: "Unified Communication.",
     description:
-      "Save managers time from training new employees and answering repetitive questions.",
+      "Pick up guest and contractor communication at any time between multiple team members.",
     icon: UserGroupIcon,
   },
   {
-    name: "AI Onboarding.",
+    name: "Personalized Branding.",
     description:
-      "Seamlessly onboard new clients and give them 24/7 access to onboarding materials.",
+      "White label all Strukter software to your own personal brand to better connect with your clients.",
     icon: SparklesIcon,
   },
 ];
@@ -55,25 +55,25 @@ export default function Feature() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-base font-semibold leading-7 text-sky-400">
-            AI Automations and Lead Generation
+            Vacation Rental Technology Solutions
           </h2>
 
           <div className="relative mt-2 w-min whitespace-nowrap text-3xl font-bold tracking-tight text-white sm:mx-auto sm:text-4xl">
-            Strukter AI
-            <a href="https://strukter.io" target="_blank">
+            Strukter Homes
+            <a href="https://www.strukterhomes.com" target="_blank">
               <ArrowTopRightOnSquareIcon className="absolute -right-16 top-1 h-8 w-8" />
             </a>
           </div>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Deploy AI agents to increase sales and save time/money on sales and
-            customer support representatives.
+            Custom-built software for vacation rental management companies to
+            scale and automate their businesses using AI.
           </p>
         </div>
       </div>
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image
-            src="/strukter_io_mockup.png"
+            src="/strukterhomes_mockup.png"
             alt="App screenshot"
             className=" rounded-xl shadow-2xl"
             width={2432}

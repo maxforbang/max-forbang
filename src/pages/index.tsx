@@ -5,6 +5,7 @@ import Logos from "~/components/Logos";
 import Hero from "~/components/Hero";
 import Layout from "~/components/Layout";
 import Strukter from "~/components/Strukter";
+import StrukterHomes from "~/components/StrukterHomes";
 import Mastela from "~/components/Mastela";
 import Steely from "~/components/Steely";
 import type { NextPageWithLayout } from "./_app";
@@ -25,6 +26,7 @@ const Home: NextPageWithLayout = () => {
           {/* <Reviews />
           <Divider text="PREVIOUS WORK" /> */}
           <Strukter />
+          <StrukterHomes />
           <Mastela />
           <Steely />
           <ContactSection />
